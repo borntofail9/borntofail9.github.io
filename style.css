@@ -1,0 +1,19 @@
+body {
+    font-family: Tahoma, serif;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px dotted rgb(86, 171, 251);
+    color: teal;
+}
+.my {
+    color: white;
+    background-color:  #8458B3;
+    box-shadow: 0 0 10px 5px black,
+                10px 10px 10px red,
+                -10px -10px 10px blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.hidden {
+    display: none;
+}
