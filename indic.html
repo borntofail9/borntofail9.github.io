@@ -1,0 +1,43 @@
+<!-- Стрелочный индикатор -->
+<!DOCTYPE html>
+<head>
+<title>Стрелочный индикатор</title>
+<link rel="stylesheet" href="indicator.css">
+</head>
+<body>
+    <h2><button onclick="window.location.href = 'index.html';">Назад</button></h2>
+    <div id="indicator">
+        <div id="arrow"></div>
+    </div>
+    <div>
+        <button onclick="updateIndicator(0)">0</button>
+        <button onclick="updateIndicator(1)">1</button>
+        <button onclick="updateIndicator(2)">2</button>
+        <button onclick="updateIndicator(3)">3</button>
+        <button onclick="updateIndicator(4)">4</button>
+        <button onclick="updateIndicator(5)">5</button>
+        <button onclick="updateIndicator(6)">6</button>
+        <button onclick="updateIndicator(7)">7</button>
+        <button onclick="updateIndicator(8)">8</button>
+        <button onclick="updateIndicator(9)">9</button>
+    </div>
+    <img src="https://sun9-73.userapi.com/impg/14raycg8_6S_DkT6Hq8qrQPMqkdvZsQ9bicaNw/n-WoJwg_RZ4.jpg?size=1080x268&quality=96&sign=58083e545efc71040f36f2d9adf3cea8&type=album" alt="Здесь должна быть картинка">
+    <script>
+        function updateIndicator(value) {
+            var indicator = document.getElementById("indicator");
+            var arrow = document.getElementById("arrow");
+
+
+            var position = (value * 30) + "px";
+            arrow.style.left = position;
+
+
+            if (value > 5) {
+                indicator.style.backgroundColor = "red";
+            } else {
+                indicator.style.backgroundColor = "#ddd";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+#indicator {
+    width: 300px;
+    height: 20px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+#arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #555;
+    position: relative;
+    top: -20px;
+}
+img {
+    margin: 10px;
+}

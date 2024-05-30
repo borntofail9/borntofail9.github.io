@@ -1,28 +1,3 @@
-<script>
-    if (confirm('Доброго времени суток, у этой страницы есть к вам вопрос, вы готовы ответить?')) {
-        var age;
-        do {
-            age = prompt('Сколько вам лет?', 'Введите сюда ваш возраст');
-            if (age === null) {
-                alert("Пожалуйста, введите ваш возраст.");
-            } else if (age === "") {
-                alert("Вы не ввели возраст.");
-            } else {
-                var confirmation = confirm("Вы уверены, что вам " + age + " лет?");
-                if (confirmation) {
-                    alert("Спасибо за ваш ответ!");
-                } else {
-                    age = null; 
-                }
-            }
-        } while (age === null);
-    }
-    alert("Спасибо, что уделили время");
-</script>
-
-
-
-
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
@@ -33,15 +8,11 @@
 <body>
     <h1>Моя страница</h1>
     <p class="learned-ok">Введите фамилию ниже:</p>
-    <form name="search">
-        <input type="text" name="Surname" size="20">
-        <input type="button" name="print" value="Подтвердить" />
-    </form>
-    <div id="printBlock"></div>
-
+    <label for="lastName">Фамилия:</label>
+    <input type="text" id="lastName" placeholder="Введите вашу фамилию" oninput="validateName(this)"><br><br>
     <p class="my">Иван</p>
     <p class="my">20 лет</p>
-    <img src="C:\Users\User\Desktop\cat.jpg">
+    <div class="tenor-gif-embed" data-postid="21336536" data-share-method="host" data-aspect-ratio="1" data-width="50%"><a href="https://tenor.com/view/get-out-of-my-head-meme-cat-meme-gif-21336536">Get Out Of My Head Meme GIF</a>from <a href="https://tenor.com/search/get+out+of+my+head-gifs">Get Out Of My Head GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <form name="question">
         <i>Готовы ли вы ответить на следующие вопросы?</i>
         <input type="checkbox" name="check">
@@ -67,6 +38,9 @@
         <p>Спасибо за заполнение анкеты!</p>
     </div>
 
+    <h2><button style="background-color: #68ea39; border: 4px double black;" onclick="window.location.href = 'indic.html';">Перейти на индикатор</button></h2>
+    <h2><button style="background-color: #68ea39; border: 4px double black;" onclick="window.location.href = 'script.html';">Страница с опросом</button></h2>
+    <h2><button style="background-color: #68ea39; border: 4px double black;" onclick="window.location.href = 'calculator.html';">Страница с калькулятором</button></h2>
     <script>
         function printForm(e){
            
@@ -108,71 +82,6 @@
                 checkboxes[i].disabled = true;
             }
         });
-    </script>
-</body>
-</html>
-
-
-
-<!-- Стрелочный индикатор -->
-<!DOCTYPE html>
-<head>
-<title>Стрелочный индикатор</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-    }
-    #indicator {
-        width: 300px;
-        height: 20px;
-        background-color: #ddd;
-        margin-bottom: 20px;
-    }
-    #arrow {
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 20px solid #555;
-        position: relative;
-        top: -20px;
-    }
-</style>
-</head>
-<body>
-    <div id="indicator">
-        <div id="arrow"></div>
-    </div>
-    <div>
-        <button onclick="updateIndicator(0)">0</button>
-        <button onclick="updateIndicator(1)">1</button>
-        <button onclick="updateIndicator(2)">2</button>
-        <button onclick="updateIndicator(3)">3</button>
-        <button onclick="updateIndicator(4)">4</button>
-        <button onclick="updateIndicator(5)">5</button>
-        <button onclick="updateIndicator(6)">6</button>
-        <button onclick="updateIndicator(7)">7</button>
-        <button onclick="updateIndicator(8)">8</button>
-        <button onclick="updateIndicator(9)">9</button>
-    </div>
-
-    <script>
-        function updateIndicator(value) {
-            var indicator = document.getElementById("indicator");
-            var arrow = document.getElementById("arrow");
-
-
-            var position = (value * 30) + "px";
-            arrow.style.left = position;
-
-
-            if (value > 5) {
-                indicator.style.backgroundColor = "red";
-            } else {
-                indicator.style.backgroundColor = "#ddd";
-            }
-        }
     </script>
 </body>
 </html>

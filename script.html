@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="tenor-gif-embed" data-postid="20103199" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/jake-lofi-gif-20103199">Jake Lofi GIF</a>from <a href="https://tenor.com/search/jake+lofi-gifs">Jake Lofi GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <h2><button onclick="window.location.href = 'index.html';">Назад</button></h2>
+    <script>
+        if (confirm('Доброго времени суток, у этой страницы есть к вам вопрос, вы готовы ответить?')) {
+            var age;
+            do {
+                age = prompt('Сколько вам лет?', 'Введите сюда ваш возраст');
+                if (age === null) {
+                    alert("Пожалуйста, введите ваш возраст.");
+                } else if (age === "") {
+                    alert("Вы не ввели возраст.");
+                } else {
+                    var confirmation = confirm("Вы уверены, что вам " + age + " лет?");
+                    if (confirmation) {
+                        alert("Спасибо за ваш ответ!");
+                    } else {
+                        age = null; 
+                    }
+                }
+            } while (age === null);
+        }
+        alert("Спасибо, что уделили время");
+    </script>
+
+
+</body>
